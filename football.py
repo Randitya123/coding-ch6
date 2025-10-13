@@ -4,12 +4,13 @@ goals=np.array([
     [2,1,0,3,1],
     [0,2,2,1,3],
     [1,2,0,2,1],
-    [0,1,0,5,2]
+    [0,1,0,5,2],
+    [2,2,2,5,2]
 ])
 #finding mean
 mean=np.mean(goals,axis=1)
 best=np.argmax(mean)
-l1=["a","b","c","d"]
+l1=["a","b","c","d","e"]
 print("AVG goals", mean)
 print("Best AVG", l1[best])
 #bar graph
