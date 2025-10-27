@@ -7,7 +7,11 @@ pd.set_option("display.max_rows",None)
 length=len(ad)
 print(length)
 #modifying data
-reads.iloc[3,3]="uiguiguig"
-print(reads.iloc[3,3])
-
+reads.iloc[3,2]="uiguiguig"
+print(reads.iloc[3,2])
+print(reads.columns)
 reads.to_csv("titanic2.csv",index=False)
+#avgergae of multiple items
+print(reads[["Age","Fare"]].mean())
+#sorting data
+print(reads.sort_values(by="Age",ascending=True).head(10))
