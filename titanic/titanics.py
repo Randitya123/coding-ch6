@@ -19,3 +19,11 @@ print(reads.info())
 print(reads.describe())
 mfc=reads[(reads["Sex"]=="male") & (reads["Pclass"]==1)]
 print(mfc["Fare"].mean())
+
+#grouping and anaylisis
+
+holdata=reads.groupby("Pclass")["Fare"].mean()
+print(holdata)
+
+holdata=reads.groupby("Name")["Survived"].mean()
+print(holdata)
