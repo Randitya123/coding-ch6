@@ -20,10 +20,9 @@ plt.show()
 m=float(input("Enter the value of slope"))
 c=float(input("Enter the value of constant"))
 
-np.arange(0,10,0.1)
+x=np.arange(0,10,0.1)
 y=m*x+c
 plt.plot(x,y,"ro-",label=f"y={m}x+{c}",linewidth=5)
-plt.plot([1,2,3,4,5],[1,8,27,64,125],"go-",label="y=x^3",linewidth=5)
 plt.xlabel("X-AXIS")
 plt.ylabel("Y-AXIS")
 plt.legend()
