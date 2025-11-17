@@ -12,3 +12,9 @@ clr=["red","blue","green","pink","brown","purple","yellow","orange","violet","in
 plt.pie(exp,labels=cat,colors=clr,autopct='%1.1f%%',startangle=90,shadow=True)
 plt.title("cool Expenses")
 plt.show()
+#exploding for highlight
+explodinglist=[0,0,0.1,0,0,0,0,0,0,0]
+plt.figure(figsize=(8,6))
+plt.pie(exp,labels=cat,colors=clr,autopct='%1.1f%%',startangle=90,shadow=True,explode=explodinglist)
+plt.title("Expenses")
+plt.show()
