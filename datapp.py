@@ -50,3 +50,7 @@ classifier.fit(xtrain,ytrain)
 predictions=classifier.predict(xtest)
 print(predictions)
 print(ytest)
+#checking accuracy
+from sklearn.metrics import accuracy_score
+acc=accuracy_score(ytest,predictions)
+print("model accuracy:",acc)
