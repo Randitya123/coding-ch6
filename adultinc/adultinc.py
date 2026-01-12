@@ -22,6 +22,13 @@ for i in read.columns:
     print("---%s---" % i)
     print(read[i].value_counts())
 #dropping un used data collums
-read.drop(["edul","capg","capl","fnlwgt"])
+read.drop(["edul","capg","capl","fnlwgt"],axis=1,inplace=True)
+print("Unused collums are droped")
 inc=set(read["50k"])
 print(inc)
+
+read["50k"]=read["50k"].map({">50K":1,"<=50K":0})
+
+print(read.head())
+
+
