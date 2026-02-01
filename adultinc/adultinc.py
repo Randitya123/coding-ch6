@@ -5,8 +5,8 @@ import seaborn as sns
 from pandas.plotting import scatter_matrix
 
 read=pd.read_csv("adult.csv")
-read.columns=["age","org","fnlwgt","edu","edul","marry","prof","fam","race","gender","capg","capl","hr","country","50k"]
-#read.rename(columns={"age":"age","org":"org","fnlwgt":"fnlwgt","edu":"edu","edul","marry","prof","fam","race","gender","capg","capl","hr","country","50k"})
+read.columns=["age","org","fnlwgt","edu","edul","marry","prof","fam","race","gender","capg","capl","hr","country","inc"]
+#read.rename(columns={"age":"age","org":"org","fnlwgt":"fnlwgt","edu":"edu","edul","marry","prof","fam","race","gender","capg","capl","hr","country","inc"})
 
 
 
@@ -24,10 +24,10 @@ for i in read.columns:
 #dropping un used data collums
 read.drop(["edul","capg","capl","fnlwgt"],axis=1,inplace=True)
 print("Unused collums are droped")
-inc=set(read["50k"])
+inc=set(read["inc"])
 print(inc)
 
-read["50k"]=read["50k"].map({" >50K":1," <=50K":0})
+read["inc"]=read["inc"].map({" >inc":1," <=inc":0})
 
 print(read.head())
 #CONVERTING TEXT DATA TO NUMERICAL DATA
