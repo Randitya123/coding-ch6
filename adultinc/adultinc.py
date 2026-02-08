@@ -27,7 +27,7 @@ print("Unused collums are droped")
 inc=set(read["inc"])
 print(inc)
 
-read["inc"]=read["inc"].map({" >inc":1," <=inc":0})
+read["inc"]=read["inc"].map({" >50K":1," <=50K":0})
 
 print(read.head())
 #CONVERTING TEXT DATA TO NUMERICAL DATA
@@ -42,4 +42,19 @@ read["edu"]=read["edu"].map({" HS-grad":0," Some-college":1," Bachelors":2," Mas
 print(read.head())
 #data visuals
 read.groupby("edu").inc.mean().plot(kind="bar")
+plt.show()
+
+read.groupby("prof").inc.mean().plot(kind="bar")
+plt.show()
+
+read.groupby("fam").inc.mean().plot(kind="bar")
+plt.show()
+
+read.groupby("gender").inc.mean().plot(kind="bar")
+plt.show()
+
+read.groupby("org").inc.mean().plot(kind="bar")
+plt.show()
+
+read.groupby("race").inc.mean().plot(kind="bar")
 plt.show()
